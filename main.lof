@@ -1,0 +1,79 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {brazil}{}
+\babel@toc {brazil}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Esquemático dos subconjuntos da AI.\relax }}{13}{figure.caption.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2}{\ignorespaces Pequena amostra de dados quaisquer.\relax }}{16}{figure.caption.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Regressão linear que prever o comportamento da pequena amostra de dados quaisquer.\relax }}{17}{figure.caption.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces O gráfico da esquerda ilustrar um modelo com alta perda e o da direita com baixa perda.\relax }}{18}{figure.caption.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Abordagem iterativa para o treinamento do modelo através da redução do erro.\relax }}{19}{figure.caption.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces Problemas de regressão linear geram gráficos de perda vs $w_1$ (peso) convexo.\relax }}{20}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces Ponto de partida aleatório utilizado pelo gradiente descente para minimizar a perda.\relax }}{20}{figure.caption.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces A descida do gradiente depende de gradientes negativos.\relax }}{21}{figure.caption.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Acréscimo da magnitude do gradiente no valor do ponto inicial move para o próximo ponto da curva de perda.\relax }}{21}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10}{\ignorespaces Se a taxa de aprendizagem for muito pequena a proximidade entre os passos é maior.\relax }}{22}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {11}{\ignorespaces A taxa de aprendizagem é muito grande.\relax }}{22}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {12}{\ignorespaces Pequena amostra de dados com somente uma dimensão atributos.\relax }}{23}{figure.caption.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {13}{\ignorespaces Comportamento esperado para um bom modelo.\relax }}{23}{figure.caption.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {14}{\ignorespaces Modelo considerado ruim com a presença de sobre-ajuste.\relax }}{24}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {15}{\ignorespaces Exemplo de um modelo considerado ruim por apresentar sub-ajuste.\relax }}{24}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {16}{\ignorespaces Novo valor teste aplicado a um modelo com sobre-ajuste.\relax }}{25}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {17}{\ignorespaces Apresenta distância entre o novo ponto e a predição do modelo, ou seja, uma visualização do erro.\relax }}{26}{figure.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {18}{\ignorespaces Mostra que a predição do modelo bom não seria perfeita, mas apresentaria um erro menor do que a com sobre-ajuste.\relax }}{26}{figure.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {19}{\ignorespaces Fluxo de trabalho para separação do conjunto de dados em treino e teste.\relax }}{27}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {20}{\ignorespaces Fluxo de trabalho para separação do conjunto de dados em treino, teste e validação.\relax }}{28}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {21}{\ignorespaces Modelo ideal em relação ao erro versus tempo de treinamento.\relax }}{28}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {22}{\ignorespaces Modelo ideal em relação ao erro versus épocas.\relax }}{29}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {23}{\ignorespaces Modelo ruim em relação ao erro versus épocas.\relax }}{29}{figure.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {24}{\ignorespaces Modelo ideal de erro de treino e de teste em relação ao as épocas.\relax }}{30}{figure.caption.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {25}{\ignorespaces Modelo ruim de erro de treino e de teste em relação ao as épocas.\relax }}{30}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {26}{\ignorespaces Ponto de corte no tempo de treinamento para evitar sobre-ajuste.\relax }}{31}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {27}{\ignorespaces Predição correta da rede neural.\relax }}{32}{figure.caption.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {28}{\ignorespaces Predição incorreta da rede neural.\relax }}{32}{figure.caption.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {29}{\ignorespaces Matriz de confusão na qual computa predições em relação do que se esperava como \textit {output}.\relax }}{33}{figure.caption.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {30}{\ignorespaces Função sigmoide.\relax }}{36}{figure.caption.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {31}{\ignorespaces Saída da regressão logística.\relax }}{38}{figure.caption.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {32}{\ignorespaces Ilustração de um neurônio biológico.\relax }}{42}{figure.caption.44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {33}{\ignorespaces Simplificação de um neurônio biológico.\relax }}{42}{figure.caption.45}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {34}{\ignorespaces Representação de um modelo de percepção simples.\relax }}{43}{figure.caption.46}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {35}{\ignorespaces Exemplo modelo de percepção simples com duas entradas alteradas por uma função soma que gera uma saída única.\relax }}{43}{figure.caption.47}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {36}{\ignorespaces Esquemático de um modelo simples de percepção o qual altera as variáveis de entrada através de uma função soma. Nele cada uma das entradas são multiplicadas por seu respectivo peso mais bias gerando uma única saída $y$.\relax }}{44}{figure.caption.48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {37}{\ignorespaces Exemplo genérico de um modelo de multi-camadas.\relax }}{44}{figure.caption.49}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {38}{\ignorespaces O exemplo a esquerda é de uma rede neural não profunda, já o da direita apresenta um caso de rede neural profunda.\relax }}{46}{figure.caption.50}%

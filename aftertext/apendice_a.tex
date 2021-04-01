@@ -1,0 +1,117 @@
+% % ----------------------------------------------------------
+% \chapter{Planta baixa da sala de reuniões}
+% \label{ap:plantaSala}
+
+
+
+% \begin{center}
+%     \includegraphics[width=14cm]{fig/plantaMedicaoSalaReunioes.png}\\
+%     Fonte: Cortesia Priscila Dal Moro (adaptado).
+% \end{center}
+
+
+% \chapter{Análise matemática da fase e atraso de grupo da FRF obtida pela deconvolução utilizando varreduras exponenciais}
+% \label{app:demonstraSweep}
+
+
+
+
+
+% A FRF de um sistema, obtida via excitação qualquer, é expressa por:
+
+% \begin{equation}
+%     H(f) = \frac{Y(f)}{X(f)} = \frac{|Y(f)|}{|X(f)|}       \e^{\text{j}(\phi_y - \phi_x)} = |H(f)|\e^{\text{j}\phi_h },
+%     \label{eq:deconvMagFase}
+% \end{equation}
+% em que $\phi_y$, $\phi_x$ e $\phi_h$ são os espectros de fase da resposta, excitação e FRF do sistema, respectivamente.
+
+% A partir da Equação~\ref{eq:deconvMagFase} fica claro que a fase da FRF é obtida pela diferença de fase entre resposta e excitação do sistema. O atraso de grupo de um espectro é obtido a partir da derivação da fase desse em relação à frequência. O atraso de grupo de um sistema é dado por:
+
+
+% \begin{equation}
+%     \tau_h = -\frac{1}{2\pi}\frac{\text{d} \phi_h(f)}{\text{d} f} = -\frac{1}{2\pi}\frac{\text{d} \phi_y(f)}{\text{d} f} + \frac{1}{2\pi}\frac{\text{d} \phi_x(f)}{\text{d} f} = \tau_y(f) - \tau_x(f),
+%     \label{eq:tauxyh}
+% \end{equation}
+% em que $\tau_y(f)$ e $\tau_x(f)$ são os atrasos de grupo dos espectros da resposta e excitação, respectivamente. 
+
+% De acordo com Muller e Massarani \citeyear{muller2001}, o atraso de grupo em sinais complexos é uma grandeza difícil de ser interpretada. Porém,  para varreduras em frequência ele informa o tempo exato em que cada componente frequência ocorre, ou seja, é a função inversa daquela descrita na Equação~\ref{eq:betaf} (p. \pageref{eq:betaf}).
+
+% A partir da relação expressa na Equação~\ref{eq:tauxyh}, observa-se que se o atraso de grupo da resposta do sistema $\tau_y$ for menor que o atraso de grupo da excitação $\tau_x$, o atraso de grupo $\tau_h$ será negativo. 
+
+% Na definição matemática da causalidade de um sistema é determinado que sua RI deve ser nula para todo o instante de tempo negativo, ou seja,
+
+% \begin{equation}
+%     h(t) = 0,\  \forall t<0.
+% \end{equation}
+
+% A partir disso, conclui-se que a distorção harmônica do sistema é rebatida para sua parte não causal devido à natureza matemática dos sinais de excitação e resposta. Dessa forma, a interpretação física da não causalidade é a parte não linear do sistema sob teste.
+
+% Dessa forma, o processo de deconvolução utilizando varreduras exponenciais é bastante útil não só para a remoção como também para a análise da resposta das componentes de distorção harmônica de um sistema. Porém, para caso de possíveis sub-harmônicas,  as componentes podem ficar contidas na cauda reverberante do ambiente, no caso de medição de RIR. Porém, esse fenômeno não é muito comum. Uma técnica para caracterização desses fenômenos é o \textit{Silence Sweep}, desenvolvido por Farina~\citeyear{farina2009silence}.
+
+% %\textcolor{red}{A qualidade de uma RI obtida depende da SNR da medição bem como de possíveis distorções (não linearidades) causadas pelo aparato de medição. Com ruídos de fase aleatória, o efeito das distorções ficará espalhado em todo o intervalo da RIR medida e a utilização de médias síncronas não irá melhorar a qualidade da medição , pois tanto os efeitos lineares como não-lineares na resposta estão correlacionados com o sinal de entrada.}
+
+% %
+
+
+% %\cite{farina2000simultaneous} - 
+
+
+% %\cite{novak2015synchronized} - \textcolor{red}{ sweep sincronizado...estudar essa bagaça}
+
+
+
+% % \begin{figure}
+% %     \centering
+% %     \caption{Planta baixa ilustrando o posicionamento do sistema fonte-receptor na medição da RIR da sala de reuniões}
+% %     \includegraphics[width=10cm]{fig/plantaMedicaoSalaReunioes.png}
+% %     \fonte{Cortesia Priscila dal Moro.}
+% %     \label{fig:plantaMedicaoSalaReunioes}
+% % \end{figure}
+
+% \chapter{HATS Cortex MK1 restaurado}
+% \label{app:clodoaldo}
+% % \begin{center}
+% %     \includegraphics[width=12cm]{fig/clodoaldo.png}\\
+% %     Fonte: Autor.
+% % \end{center}
+
+% A Figura~\ref{fig:clodoaldo} mostra as  fotografias frontal e lateral do HATS restaurado. As orelhas direita e esquerda foram construídas por impressão 3D a partir de um modelo disponível no repositório Grabcad (Figura~\ref{fig:modeloOrelhaGrabcad}). 
+
+% \begin{figure}[H]
+%     \centering
+%     \caption{Vista frontal e lateral do HATS Cortex MK~1 restaurado.}
+%     \includegraphics[width=12cm]{fig/clodoaldo.png}
+%     \fonte{Autor.}
+%     \label{fig:clodoaldo}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \caption{Modelo geométrico original da orelha.}
+%     \includegraphics[width=8cm]{fig/modeloOrelhaGrabcad.png}
+%     \fonte{\url{https://grabcad.com/library/ear-model-like-iec-of-the-japan-proposal-1}}
+%     \label{fig:modeloOrelhaGrabcad}
+% \end{figure}
+
+% A geometria foi adaptada para possibilitar o encaixe no suporte da cabeça do HATS (Figura~\ref{fig:modeloOrelhaGrabcad}). A geometria para impressão  da orelha esquerda foi obtido simplesmente espelhando a geometria adaptada. Após a impressão, para melhor encaixe  e acabamento das peças, foram aplicadas camadas de massa plástica poliéster e as superfícies foram lixadas. Para finalizar o acabamento, foram aplicadas 3 demãos de tinta  spray.
+
+% \begin{figure}[H]
+%     \centering
+%     \caption{Modelo geométrico da orelha adaptado para impressão 3D.}
+%     \includegraphics[width=6cm]{fig/modeloOrelhaAdaptadoImpressao.png}
+%     \fonte{Autor.}
+%     \label{fig:modeloOrelhaGrabcad}
+% \end{figure}
+
+
+% \begin{figure}[H]
+%     \centering
+%     \caption{Diagrama esquemático do circuito adaptador para ligar o microfone na mesa de som.}
+%     \includegraphics[width=7cm]{fig/circuitoPhantomClodoaldo.png}
+%     \label{fig:circuitoPhantomClodoaldo}
+%     \fonte{Autor.}
+% \end{figure}
+
+% Os microfones instalados foram do Modelo~AOM-5024L-HD-R da Pui Audio, cujo \textit{datasheet} é mostrado no Anexo~\ref{anexo:micClodoaldo}. Para ligar os transdutores à mesa de som Behringer Xenix~802, cujo sistema de alimentação é via \textit{Phantom Power} (48~V), foi construído um circuito de adaptação, cujo esquemático é mostrado na Figura~\ref{fig:circuitoPhantomClodoaldo}. O resistor R1 tem valor de 100~k$\Omega$ e o capacitor eletrolítico tem valor de 22~ $\mu$F. Apesar de ser um circuito simples, sem um estágio de amplificação, o sistema apresentou boa qualidade devido ao Transistor de Efeito de Campo  (FET) de alto ganho presente no encapsulamento do transdutor.
+
+

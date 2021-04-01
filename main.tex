@@ -1,0 +1,327 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% Modelo UFSC para Trabalhos Academicos (tese de doutorado, dissertação de
+% mestrado) utilizando a classe abntex2
+%
+% Autor: Alisson Lopes Furlani
+% 	Modificações:
+%	- 27/08/2019: Alisson L. Furlani, add pacote 'glossaries' para listas
+%   - 30/10/2019: Alisson L. Furlani, adjusted some spacing errors and changed math fonts
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	%openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão no anverso. Oposto a twoside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	%french,				% idioma adicional para hifenização
+	%spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+	
+% comandos pessoais Ricardinho
+% \usepackage[font=bf]{caption}
+\usepackage[font=footnotesize]{caption}
+%  pacote adicionado por mim
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage[colorinlistoftodos]{todonotes}
+%  pacote adicionado por mim
+
+\usepackage{pdfpages}
+\usepackage{subfig}
+\usepackage{float}%coloca figura onde você quer!
+
+\usepackage{setup/ufscthesisA4-alfCaetano}
+\addbibresource{aftertext/references.bib} % Seus arquivos de referências
+\newcommand{\ai}{\textit{Artificial Intelligence}}
+\newcommand{\ml}{\textit{Machine Learning}}
+\newcommand{\dl}{\textit{Deep Learning}}
+\newcommand{\nn}{\textit{Neural Network}}
+\newcommand{\ia}{Inteligência Artificial}
+\newcommand{\am}{Aprendizado de Máquinas}
+\newcommand{\ap}{Aprendizado Profundo}
+\newcommand{\rn}{Rede Neural}
+\newcommand{\rns}{Redes Neurais}
+% \newcommand{\Figura}[1]{Figura~\ref{#1}}
+% \newcommand{\BK}{Brüel \& Kj\ae r\ }
+% \newcommand{\Equacao}[1]{Equação~\ef{#1}}
+% \newcommand{\jcomp}{\operatorname{j}
+% \newcommand{\e}{\operatorname{e}}
+% \newcommand{\diff}{\operatorname{d}}
+% \usepackage[section]{placeins}
+% ---
+% Filtering and Mapping Bibliographies
+% ---
+\DeclareSourcemap{
+	\maps[datatype=bibtex]{
+		% remove fields that are always useless
+		\map{
+			\step[fieldset=abstract, null]
+			\step[fieldset=pagetotal, null]
+		}
+		% remove URLs for types that are primarily printed
+%		\map{
+%			\pernottype{software}
+%			\pernottype{online}
+%			\pernottype{report}
+%			\pernottype{techreport}
+%			\pernottype{standard}
+%			\pernottype{manual}
+%			\pernottype{misc}
+%			\step[fieldset=url, null]
+%			\step[fieldset=urldate, null]
+%		}
+		\map{
+			\pertype{inproceedings}
+			% remove mostly redundant conference information
+			\step[fieldset=venue, null]
+			\step[fieldset=eventdate, null]
+			\step[fieldset=eventtitle, null]
+			% do not show ISBN for proceedings
+			\step[fieldset=isbn, null]
+			% Citavi bug
+			\step[fieldset=volume, null]
+		}
+	}
+}
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+% FIXME Substituir 'Nome completo do autor' pelo seu nome.
+\autor{Lúcia Corrêa da Silva}
+% FIXME Substituir 'Título do trabalho' pelo título da trabalho.
+\titulo{Detecção e classificação de padrões sonoros utilizando inteligência artificial}
+% FIXME Substituir 'Subtítulo (se houver)' pelo subtítulo da trabalho.  
+% Caso não tenha substítulo, comente a linha a seguir.
+% \subtitulo{Subtítulo (se houver)}
+% FIXME Substituir 'XXXXXX' pelo nome do seu
+% orientador.
+\orientador{Prof. Arcanjo Lenzi, PhD}
+% FIXME Se for orientado por uma mulher, comente a linha acima e descomente a linha a seguir.
+% \orientador[Orientadora]{Nome da orientadora, Dra.}
+% FIXME Substituir 'XXXXXX' pelo nome do seu
+% coorientador. Caso não tenha coorientador, comente a linha a seguir.
+\coorientador{}
+% FIXME Se for coorientado por uma mulher, comente a linha acima e descomente a linha a seguir.
+% \coorientador[Coorientadora]{XXXXXX, Dra.}
+% FIXME Substituir 'XXXXXX' pelo nome do Coordenador do 
+% programa/curso.
+\coordenador{}
+% FIXME Se for coordenadora mulher, comente a linha acima e descomente a linha a seguir.
+% \coordenador[Coordenadora]{Nome da Coordenadora, Dra.}
+% FIXME Substituir '[ano]' pelo ano (ano) em que seu trabalho foi defendido.
+\ano{2021}
+% FIXME Substituir '[dia] de [mês] de [ano]' pela data em que ocorreu sua defesa.
+% \data{[45] de [setembro] de 2020}
+\data{\today}
+% FIXME Substituir 'Local' pela cidade em que ocorreu sua defesa.
+\local{Florianópolis-SC}
+\instituicaosigla{UFSC}
+\instituicao{Universidade Federal de Santa Catarina}
+% FIXME Substituir 'Dissertação/Tese' pelo tipo de trabalho (Tese, Dissertação). 
+\tipotrabalho{Dissertação}
+% FIXME Substituir '[mestre/doutor] em XXXXXX' pela grau adequado.
+\formacao{Mestre em Engenharia Mecânica}
+% FIXME Substituir '[mestrado/doutorado]' pelo nivel adequado.
+\nivel{Mestrado}
+% FIXME Substituir 'Programa de Pós-Graduação em XXXXXX' pela curso adequado.
+\programa{Programa de Pós-Graduação em Engenharia Mecânica}
+% FIXME Substituir 'Campus XXXXXX ou Centro de XXXXXX' pelo campus ou centro adequado.
+\centro{Centro Tecnológico}
+\preambulo
+{%
+\imprimirtipotrabalho~submetida~ao~\imprimirprograma~da~\imprimirinstituicao~para~a~obtenção~do~título~de~\imprimirformacao.
+}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+% ---
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={ufsc, latex, abntex2}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,%blue,          	% color of internal links
+    	citecolor=black,%blue,        		% color of links to bibliography
+    	filecolor=black,%magenta,      		% color of file links
+		urlcolor=black,%blue,
+		bookmarksdepth=4
+}
+\makeatother
+% ---
+
+% ---
+% compila a lista de abreviaturas e siglas e a lista de símbolos
+% ---
+
+% Declaração das siglas
+\siglalista{AI}{Inteligência Artificial}
+\siglalista{ML}{Aprendizado de Máquinas}
+\siglalista{DL}{Aprendizado Profundo}
+\siglalista{NN}{Rede Neural}
+\siglalista{LVA}{Laboratório de Vibrações e Acústica}
+\siglalista{MSE}{Erro Médio Quadrático}
+% \siglalista{RI}{Resposta ao Impulso}
+% \siglalista{ABNT}{Associação Brasileira de Normas Técnicas}
+% \siglalista{NPS}{Nível de Pressão Sonora}
+% \siglalista{DUT}{Dispositivo sob Teste}
+% \siglalista{SLIT}{Sistema Linear e Invariante no Tempo}
+% \siglalista{FFT}{Transformada Rápida de Fourier}
+% \siglalista{TF}{Transformada de Fourier}
+% \siglalista{ITF}{Transformada Inversa de Fourier}
+% \siglalista{FRF}{Função Resposta em Frequência}
+% \siglalista{SNR}{Relação Sinal Ruído}
+% \siglalista{MR}{Microfone de referência}
+% \siglalista{SVS}{sensação de volume sonoro}
+% \siglalista{IFFT}{Transformada Rápida Inversa de Fourier}
+% % \siglalista{TDS}{\textit{Time Delay Spectrometry}}
+% \siglalista{ADC}{Conversor Analógico-Digital}
+% \siglalista{DAC}{Conversor Digital-Analógico}
+% \siglalista{LVA}{Laboratório de Vibrações e Acústica}
+% \siglalista{FIR}{Resposta Impulsiva Finita}
+% % Declaração dos simbolos
+% % Declaração dos simbolos
+% \simbololista{f}{\ensuremath{f}}{Frequência [Hz]}
+% \simbololista{w}{\ensuremath{\omega}}{Frequência Angular [rad/s]}
+% \simbololista{Dirac}{\ensuremath{\delta(t)}}{Função Delta de Dirac}
+% % \simbololista{x}{\ensuremath{x(t)}}{Sinal de entrada arbitrário em um sistema}
+% % \simbololista{y}{\ensuremath{y(t)}}{Resposta de um sistema para uma entrada arbitrária $x(t)$}
+
+% \simbololista{Fourier}{\ensuremath{\mathcal{F}}}{Operador da Transformada de Fourier}
+
+% \simbololista{IFourier}{\ensuremath{\mathcal{F}^{-1}}}{Operador da Transformada Inversa de Fourier}
+% compila a lista de abreviaturas e siglas e a lista de símbolos
+\makenoidxglossaries 
+
+% ---
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% Espaçamento 1.5 entre linhas
+\OnehalfSpacing
+
+% Corrige justificação
+%\sloppy
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual %a macro \pretextual é acionado automaticamente no início de \begin{document}
+% ---
+% Capa, folha de rosto, ficha bibliografica, errata, folha de apróvação
+% Dedicatória, agradecimentos, epígrafe, resumos, listas
+% ---
+
+\input{beforetext/beforetext}
+
+
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ---
+% 1 - Introdução
+% ---
+\include{chapters/1-introducao}
+\include{chapters/2-fundamentacao}
+\include{chapters/3-Metodologia}
+\include{chapters/4-resultados}
+\include{chapters/5-conclusao}
+\include{chapters/6-rascunho}
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+%\postextual
+% ----------------------------------------------------------
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\begingroup
+    \SingleSpacing\printbibliography[title=REFERÊNCIAS]
+\endgroup
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+%	\partapendices* 
+	\input{aftertext/apendice_a}
+\end{apendicesenv}
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+\begin{anexosenv}
+%	\partanexos*
+	\input{aftertext/anexo_a}
+\end{anexosenv}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+%\phantompart
+%\printindex
+%---------------------------------------------------------------------
+
+\end{document}

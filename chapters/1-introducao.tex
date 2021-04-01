@@ -1,0 +1,132 @@
+% ----------------------------------------------------------
+\chapter{Introdução} \label{cha:introduction}
+% ----------------------------------------------------------
+
+    Os padrões sonoros permitem identificar características importantes do comportamento de sistemas dinâmicos possibilitando ao ser humano reconhecer os mais variados fenômenos. Com as habilidades auditivas e vocais, um individuo é capaz de gerar e discernir sinais sonoros sem significados, fonemas, palavra, frases, e até em uma conversa conseguir encontrar o local de origem de um locutor pelo seu sotaque e regionalismos. Também é possível criar sons com ritmos, timbres, estilos diferentes assimilando assim sues contrastes. Essa capacidade também pode ser utilizada para dar significado a alertas sonoros, ruídos causados por animais, batidas, entre outros. 
+    
+    As aptidões humanas de classificação de sinais foram relevantes no seu desenvolvimento e na forma de interagir com o mundo  \cite{jung2020human}. Logo, as descrição de comportamento de sistemas são estudadas para desenvolver técnicas que possibilitam aperfeiçoar ou adicionar recursos em produtos e serviços, como também orientar a criação de ferramentas e a detecção de problemas. A identificação de falhas ou condições atípicas de operação em máquinas é uma aplicação interessante \cite{yang2019machine}, pois pode ser verificada diariamente nos produtos, por exemplo, ruídos incomuns produzido por automóveis podem avisar o próprio condutor ou mecânico de algum tipo de problema. Logo, alguns sinais relatam tanto a alertas de avaria como também da qualidade do dispositivo.
+
+    No contexto industrial, essas ferramentas podem ser de grande utilidade para prever falhas tanto nas máquinas da linha de fabricação \cite{purohit2019mimii} quanto no produto final \cite{yang2019machine}, elas auxiliam no desenvolvimento de equipamento em baixo custos de forma automatizada e otimizada \cite{zahid2015optimized}. Outra prática relevante é no monitoramento a partir de sistemas embarcados, o que é vantajoso em situações de grande prejuízo caso a falha no equipamento não seja detectada imediatamente. Nestes casos, o interessante é obter uma análise prévia, se não imediata do problema, para uma abordagem simples e efetiva, gerando menos perda de material e tempo.
+
+    % No contexto industrial, essas técnicas podem ser aplicadas nas produções em série, auxiliando no reconhecimento de mau funcionamento nas linhas. Essas ferramentas são automatizadas para a fabricação de equipamento em baixo custos e otimizada, portanto, outra prática relevante é o monitoramento a partir de sistemas embarcados, o que é vantajoso em situações de grande prejuízo caso a falha no equipamento não seja detectada imediatamente. Nestes casos, o interessante é obter uma análise prévia, se não imediata do problema, para uma abordagem simples e efetiva, gerando menos perda de material e tempo.
+    
+    % as orientações de conserto são aplicáveis em série, assim como as de reconhecimento de mau funcionamento nas linhas de produção.
+    
+    Do ponto de vista técnico, a classificação consiste em extrair características tanto físicas quanto perceptivas de um sinal sonoro e, a partir disso, definir uma classe na qual o evento em questão melhor se enquadra \cite{alias2016review}. Para isso, pode-se utilizar algoritmos de extração e classificação de recursos que são bastante diversificados. Uma forma de simplificar essa escolha é ter em mente que ela depende do domínio no qual a análise será realizada. 
+    
+    Atualmente, novos métodos estão sendo estudados, entre eles a classificação automática de sinais sonoros utilizando \gls{AI}\footnote{Acrônimo do inglês para \ai.}. Essa é uma área crescente de pesquisa com inúmeras aplicações no mundo real existindo uma grande quantidade de trabalhos em campos relacionados ao áudio\cite{unknown}, como fala \cite{abdel2014convolutional} e música \cite{boddapati2017classifying}, e alguns trabalhos sobre a classificação de sons ambientais \cite{boddapati2017classifying}. O conteúdo desses estudos são empregados em produtos e serviços tais como: aplicativos de reconhecimento de fala ou musica, assistente residenciais, próteses auditivas, sistemas de automatização, carros, entre outros. 
+    
+    É importante averiguar essas tecnologias emergentes tanto no sentido de inovação de produtos quanto na análise preditiva para detecção de prováveis avarias de amostras. Uma aplicação que ainda carece de estudos aprofundados é a classificação de padrões sonoros de compressores hermético utilizando algoritmos de inteligência artificial.
+    
+    O compressor é um dos responsável pela circulação de fluído ao longo do sistema de refrigeração junto com o condensador, válvula de expansão e evaporador, este dispositivo torna possível o ciclo de refrigeração \cite{boabaid2017estudo}. Ele também é uma das fonte sonoras mais importantes desse conjunto, pois as energias acústicas e vibratórias produzidas no seu interior são transmitidas dele ao ambiente com níveis de ruído consideráveis. Dessa forma, identificar os ruídos anômalos dos típicos é de suma importância para indicar falhas de operação ou descrever a qualidade sonora do produto final.
+    
+    Portanto, de todos os padrões sonoros de compressores herméticos, foram escolhidos alguns para treinar redes neurais para classifica-los. Essa será uma primeira análise para que em trabalho futuros seja possível reconhecer anomalias no sistema. Entre os sons escolhidos estão: \textit{dripping} (gotejamento), \textit{knock}, \textit{start stop}, batida de mola, operação estacionária.\\
+    
+    NO FINAL DO TRABALHO VOLTAR PARA DESCREVER TODOS OS SINAIS ESCOLHIDOS.
+    
+    \section{Objetivos}    
+    
+        A partir do exposto anteriormente e da necessidade de identificar padrões sonoros de compressores,  o objetivo geral deste trabalho é determinar a eficácia diferentes algoritmos de inteligência artificial para reconhecer e classificar padrões de falhas a partir de sinais pressão produzidos por compressores herméticos de sistemas de refrigeração.
+    
+    \subsubsection*{Objetivos específicos}
+    
+        \begin{itemize}
+            \item Investigar o funcionamento de diferentes algoritmos de redes neurais para detecção de padrões em sinais de sistemas de refrigeração;
+            \item Implementar rotinas de treinamento e classificação de maneira organizada e intuitiva para utilização posterior do \gls{LVA} e empresas parceiras;
+            \item Investigar o comportamento dos algoritmos com diferentes tipos de entradas, tais como sinais de pressão sonora e aceleração.
+        \end{itemize}
+        
+    \section{Organização do trabalho}
+        
+        A estrutura de trabalho está organizada da seguinte forma, há (TANTOS) capítulos. O primeiro é uma introdução dos trabalho de padrão sonoros, das áreas que são beneficiadas por estas técnicas e do motivo de utilizar algoritmos de inteligência artificial para classificar em classes sinais sonoros de compressores.
+    
+        No Capítulo 2 é apresentado o referencial teórico, no qual são descritas as principais teorias utilizadas para o trabalho, tendo como base  a literatura e as normas referentes a cada área necessária para o desenvolvimento do trabalho.\\
+        
+        % QUANDO TERMINAR OS OUTROS CAPÍTULOS ESCREVER O RESTO.
+
+
+% \section*{[Contextualização (só para marcar)]}
+% \section*{[Justificativa do trabalho (só para marcar)]}
+% \section*{[Proposta do trabalho (só para marcar )]}
+% \section{Objetivos}
+% \subsection{Objetivo Geral}
+% \subsection{Objetivos Específicos}
+% \section{Organização do trabalho}
+% \section*{Esqueleto do trabalho}
+% \begin{enumerate}
+%     \item Introdução
+%     \begin{enumerate}
+%         \begin{enumerate}[label=\theenumi\arabic*]
+%             \item[] Contextualização
+%             \item[] Justificativa
+%             \item[] Proposta
+%             \item Objetivos
+%             \item Organização do trabalho
+%         \end{enumerate}
+%     \end{enumerate}
+%     \item Fundamentação teórica
+%     \begin{enumerate}[label=\theenumi.\arabic*]
+%         \item Sinais
+%         \begin{itemize}
+%             \item Por enquanto os sinais são: operação estacionária, dripping, knock 
+%             \item o que se espera dos sinais avaliados (tempo, freq., e da análise energética)
+%         \end{itemize}
+%         \item PDS
+%         \begin{itemize}
+%             \item Redução de ruído e SNR
+%             \item truncamento de sinais (janelamento)
+%             \item Energia do sinal (STFT, mel, mfcc, chroma, spectral contrast, tonnetz)
+%         \end{itemize}
+%         \item Redes Neurais
+%         \begin{itemize}
+%             \item Resumo inteligência artificial, aprendizado de maquinas e aprendizado profundo
+%             \item Rede convolucional (1D e 2D)
+%             \item Rede recorrente (LSTM)
+%             \item Rede nn
+%             \item Parâmetros de ativação, propagação de erro, etc
+%             \item Métricas para avaliação das redes neurais
+%         \end{itemize}
+%     \end{enumerate}
+%     \item Processamento dos sinais e configurações das redes neurais 
+%     \begin{enumerate}[label=\theenumi.\arabic*]
+%         \item Medição operação estacionária (florinda, condição atmsf, ... )
+%         \item PDS - como foi realizado:
+%         \begin{itemize}
+%             \item criação do banco de dados
+%             \item redução de ruído
+%             \item SNR
+%             \item concatenação dos sinais
+%             \item os cortes (se descaracterizar)
+%             \item nº de amostras
+%             \item calculo de energia dos sinais
+%             \item determinação das features
+%         \end{itemize}
+%         \item Treinamento das redes neurais
+%         \begin{itemize}
+%             \item determinação dos labels
+%             \item reshape dos sinais para input na rede
+%             \item separação do sinais (traino, validação e teste)
+%             \item configuração das redes (métricas, breakpoints, endpoints, ...)
+%             \item como foi implementada as redes neurais (cnn, cnn2d, nn e LSTM)
+%         \end{itemize}
+%     \end{enumerate}
+%     \item Resultados do banco de dados teste (atualmente os resultados que tenho - para as 4 redes analisadas)
+%     \begin{enumerate}[label=\theenumi.\arabic*]
+%         \item Configuração sinais de entrada: 1340 amostras de 1 s cada
+%         \begin{itemize}
+%             \item sinais individuais de dripping, knock e op. estacionária sem alteração na SNR
+%             \item sinais concatenados (fenômenos a op. estacionária + op. estacionária individual) sem alteração na SNR
+%             \item sinais concatenados (fenômenos a op. estacionária) sem alteração na SNR
+%             \item sinais concatenados (fenômenos a op. estacionária) com alteração na SNR (-6 e -12 dBFS)
+%         \end{itemize}
+%         \item Configuração sinais de entrada: 16 e 32 amostras de 1 s cada
+%         \begin{itemize}
+%             \item sinais concatenados (fenômenos a op. estacionária) com alteração na SNR (-6 e -12 dBFS)
+%         \end{itemize}
+%         \item Configuração sinais de entrada: 16 e 32 amostras de 0.2 s cada
+%         \begin{itemize}
+%             \item sinais concatenados (fenômenos a op. estacionária) com alteração na SNR (-6 e -12 dBFS)
+%         \end{itemize}
+%     \end{enumerate}
+%     \item Considerações finais
+% \end{enumerate}
