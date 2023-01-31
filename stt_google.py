@@ -10,23 +10,16 @@ import math
 
 LANG_CODE = 'en-US'  # Language to use
 
-GOOGLE_SPEECH_URL = 'https://www.google.com/speech-api/v1/recognize?xjerr=1&client=chromium&pfilter=2&lang=%s&maxresults=6' % (LANG_CODE)
+GOOGLE_SPEECH_URL = f'https://www.google.com/speech-api/v1/recognize?xjerr=1&client=chromium&pfilter=2&lang={LANG_CODE}&maxresults=6'
 
 FLAC_CONV = 'flac -f'  # We need a WAV to FLAC converter. flac is available
-                       # on Linux
-
 # Microphone stream config.
 CHUNK = 1024  # CHUNKS of bytes to read each time from mic
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 16000
 THRESHOLD = 2500  # The threshold intensity that defines silence
-                  # and noise signal (an int. lower than THRESHOLD is silence).
-
 SILENCE_LIMIT = 1  # Silence limit in seconds. The max ammount of seconds where
-                   # only silence is recorded. When this time passes the
-                   # recording finishes and the file is delivered.
-
 PREV_AUDIO = 0.5  # Previous audio (in seconds) to prepend. When noise
                   # is detected, how much of previously recorded audio is
                   # prepended. This helps to prevent chopping the beggining
@@ -77,13 +70,15 @@ def listen_for_speech(threshold=THRESHOLD, num_phrases=-1):
                     input=True,
                     frames_per_buffer=CHUNK)
 
-    print "* Listening mic. "
+    #Open stream
+    p = pyaudio.PyAudio()
+
     audio2send = []
     cur_data = ''  # current chunk  of audio data
     rel = RATE/CHUNK
     slid_win = deque(maxlen=SILENCE_LIMIT * rel)
     #Prepend audio from 0.5 seconds before noise was detected
-    prev_audio = deque(maxlen=PREV_AUDIO * rel) 
+    prev_audio = deque(maxlen=PREV_AUDIO * rel)
     started = False
     n = num_phrases
     response = []
@@ -92,8 +87,11 @@ def listen_for_speech(threshold=THRESHOLD, num_phrases=-1):
         cur_data = stream.read(CHUNK)
         slid_win.append(math.sqrt(abs(audioop.avg(cur_data, 4))))
         #print slid_win[-1]
-        if(sum([x > THRESHOLD for x in slid_win]) > 0):
+        if sum(x > THRESHOLD for x in slid_win) > 0:
             if(not started):
+                print "Starting record of phrase"
+                started = True
+            audio2send.append(cur_data)
                 print "Starting record of phrase"
                 started = True
             audio2send.append(cur_data)
@@ -119,7 +117,9 @@ def listen_for_speech(threshold=THRESHOLD, num_phrases=-1):
         else:
             prev_audio.append(cur_data)
 
-    print "* Done recording"
+    #Open stream
+    p = pyaudio.PyAudio()
+
     stream.close()
     p.terminate()
 
@@ -130,16 +130,16 @@ def save_speech(data, p):
     """ Saves mic data to temporary WAV file. Returns filename of saved 
         file """
 
-    filename = 'output_'+str(int(time.time()))
+    filename = f'output_{int(time.time())}'
     # writes data to WAV file
     data = ''.join(data)
-    wf = wave.open(filename + '.wav', 'wb')
+    wf = wave.open(f'{filename}.wav', 'wb')
     wf.setnchannels(1)
     wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
     wf.setframerate(16000)  # TODO make this value a function parameter?
     wf.writeframes(data)
     wf.close()
-    return filename + '.wav'
+    return f'{filename}.wav'
 
 
 def stt_google_wav(audio_fname):
